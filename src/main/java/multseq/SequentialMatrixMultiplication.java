@@ -1,4 +1,4 @@
-package multparallel;
+package multseq;
 
 public class SequentialMatrixMultiplication {
 
@@ -8,7 +8,7 @@ public class SequentialMatrixMultiplication {
 
     private int mSize;
 
-    SequentialMatrixMultiplication(int[][] a, int[][] b, int mSize) {
+    public SequentialMatrixMultiplication(int[][] a, int[][] b, int mSize) {
         this.a = a;
         this.b = b;
         this.mSize = mSize;

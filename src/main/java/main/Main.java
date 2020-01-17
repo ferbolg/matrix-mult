@@ -1,4 +1,7 @@
-package multparallel;
+package main;
+
+import multparallel.ParallelMatrixMultiplication;
+import multseq.SequentialMatrixMultiplication;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -43,9 +46,8 @@ public class Main {
             long finish = System.currentTimeMillis();
             System.out.format("Time elapsed: %d ms\n", finish - start);
 
-            // for small matrices we can print the sresult to check the logic
-//            int[][] sresult = smm.getResult();
-//            System.out.println(Arrays.deepToString(sresult));
+            // for small matrices we can print the result to check the logic
+//            System.out.println(Arrays.deepToString(smm.getResult()));
 
 
             System.out.println("Parallel matrix multiplication starts...");
@@ -57,9 +59,8 @@ public class Main {
             long stopTime = System.currentTimeMillis();
             System.out.format("Time elapsed: %d ms\n", stopTime - startTime);
 
-            // for small matrices we can print the presult to check the logic
-//            int [][] presult = pmm.getResult();
-//            System.out.println(Arrays.deepToString(presult));
+            // for small matrices we can print the result to check the logic
+//            System.out.println(Arrays.deepToString(pmm.getResult()));
 
         }
     }

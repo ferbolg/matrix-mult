@@ -14,7 +14,7 @@ public class ParallelMatrixMultiplication {
 
     private static final int POOL_SIZE = Runtime.getRuntime().availableProcessors();
 
-    ParallelMatrixMultiplication(int[][] a, int[][] b, int mSize) {
+    public ParallelMatrixMultiplication(int[][] a, int[][] b, int mSize) {
         this.a = a;
         this.b = b;
         this.mSize = mSize;

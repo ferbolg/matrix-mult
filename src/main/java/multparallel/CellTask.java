@@ -9,7 +9,7 @@ public class CellTask implements Runnable {
     private int[][] m3;
 
 
-    CellTask(int ii, int jj, int mSize, int[][] m1, int[][] m2, int[][] m3) {
+    public CellTask(int ii, int jj, int mSize, int[][] m1, int[][] m2, int[][] m3) {
 
         this.i = ii;
         this.j = jj;
