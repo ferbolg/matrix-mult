@@ -10,15 +10,15 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        if ((n < 2) || (n > 10000)) {
-            System.out.println("Matrix size must be in the range [2...10000]");
+        if ((n < 1) || (n > 10000)) {
+            System.out.println("Matrix size must be in the range [1...10000]");
             return;
         } else {
 
             int mSize = n;
 
-            long[][] m1 = new long[mSize][mSize];
-            long[][] m2 = new long[mSize][mSize];
+            int[][] m1 = new int[mSize][mSize];
+            int[][] m2 = new int[mSize][mSize];
 
             // for check purposes, we initialize all elements of m1 with 1
             // likewise, we initialize diagonal elements of m2 with 1, and others with 0
@@ -44,7 +44,7 @@ public class Main {
             System.out.format("Time elapsed: %d ms\n", finish - start);
 
             // for small matrices we can print the sresult to check the logic
-//            long[][] sresult = smm.getResult();
+//            int[][] sresult = smm.getResult();
 //            System.out.println(Arrays.deepToString(sresult));
 
 
@@ -58,7 +58,7 @@ public class Main {
             System.out.format("Time elapsed: %d ms\n", stopTime - startTime);
 
             // for small matrices we can print the presult to check the logic
-//            long [][] presult = pmm.getResult();
+//            int [][] presult = pmm.getResult();
 //            System.out.println(Arrays.deepToString(presult));
 
         }

@@ -2,21 +2,20 @@ package multparallel;
 
 public class SequentialMatrixMultiplication {
 
-    private long[][] a;
-    private long[][] b;
-    private long[][] c;
+    private int[][] a;
+    private int[][] b;
+    private int[][] c;
 
     private int mSize;
 
-    SequentialMatrixMultiplication(long[][] a, long[][] b, int mSize) {
-
+    SequentialMatrixMultiplication(int[][] a, int[][] b, int mSize) {
         this.a = a;
         this.b = b;
         this.mSize = mSize;
-        this.c = new long[mSize][mSize];
+        this.c = new int[mSize][mSize];
     }
 
-    public long[][] getResult() {
+    public int[][] getResult() {
         return c;
     }
 

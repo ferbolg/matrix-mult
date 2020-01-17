@@ -6,24 +6,22 @@ import java.util.concurrent.TimeUnit;
 
 public class ParallelMatrixMultiplication {
 
-    private long[][] a;
-    private long[][] b;
-    private long[][] c;
+    private int[][] a;
+    private int[][] b;
+    private int[][] c;
 
     private int mSize;
 
-    private static final int
-            POOL_SIZE = 10;
+    private static final int POOL_SIZE = Runtime.getRuntime().availableProcessors();
 
-    ParallelMatrixMultiplication(long[][] a, long[][] b, int msize) {
-
+    ParallelMatrixMultiplication(int[][] a, int[][] b, int mSize) {
         this.a = a;
         this.b = b;
-        this.mSize = msize;
-        this.c = new long[msize][msize];
+        this.mSize = mSize;
+        this.c = new int[mSize][mSize];
     }
 
-    public long[][] getResult() {
+    public int[][] getResult() {
         return c;
     }
 
@@ -39,9 +37,8 @@ public class ParallelMatrixMultiplication {
             }
 
             executor.shutdown();
-            executor.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
-            while (!executor.isTerminated()) {
-            }
+            executor.awaitTermination(1, TimeUnit.HOURS);
+
         } catch (Exception e) {
             e.printStackTrace();
         }

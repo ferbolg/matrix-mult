@@ -4,12 +4,12 @@ public class CellTask implements Runnable {
 
     private int i, j, mSize;
 
-    private long[][] m1;
-    private long[][] m2;
-    private long[][] m3;
+    private int[][] m1;
+    private int[][] m2;
+    private int[][] m3;
 
 
-    CellTask(final int ii, final int jj, final int mSize, final long[][] m1, final long[][] m2, long[][] m3) {
+    CellTask(int ii, int jj, int mSize, int[][] m1, int[][] m2, int[][] m3) {
 
         this.i = ii;
         this.j = jj;
@@ -21,14 +21,15 @@ public class CellTask implements Runnable {
     }
 
     /**
-     * Here we perform multiplications and additions to calculate the value for resultant matrix cell
+     * Here we perform multiplication and addition to calculate the value
+     * for matrix cell
      */
 
     public void run() {
 
-        long sum = 0;
+        int sum = 0;
 
-        for (int k = 0; k < this.mSize; k++) {
+        for (int k = 0; k < mSize; k++) {
 
             sum = (sum + (m1[i][k] * m2[k][j]) % 2) % 2;
         }
