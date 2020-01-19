@@ -3,3 +3,4 @@ matrix-mult-parallel.iml
 /target
 README
 LICENSE
+/dependency-reduced-pom.xml
